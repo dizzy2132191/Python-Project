@@ -85,13 +85,87 @@ if False:
     print("나는 바보다.")
 '''
 
-
+'''
 hour = 12
 
 if hour < 12:
     print('오전입니다.')
 if hour >= 12:
     print('오후입니다.')
+'''
+'''
+from datetime import datetime
+hour = datetime.now().hour
+print(hour)
+if hour < 12:
+    print('오전입니다.')
 
-#from datetime import datetime  (무슨 뜻?)
-#hour = datetime.now().hour     (무슨 뜻?)
+number = 15
+if number % 3 == 0:
+    print("{}는 3의 배수입니다.".format(number))
+
+number = 16
+if number % 3 == 0:
+    print("{}는 3의 배수입니다.".format(number))
+
+from datetime import datetime
+hour = datetime.now().hour
+if hour % 6 == 0:
+    print('종이 울립니다.')
+
+Scissor = '가위'
+Rock = '바위'
+Paper = '보'
+
+Win = '이겼다!'
+Draw = '비겼다.'
+Lose = '졌다.'
+
+
+mine = '가위'
+yours = '바위'
+
+if mine == yours:
+    result = Draw
+else:
+    if mine == Scissor:
+        if yours == Rock:
+            result = Lose
+        else:
+            result = Win
+    else:
+        if mine == Rock:
+            if yours == Paper:
+                result = Lose
+            else:
+                result = Win
+        else:
+            if mine == Paper:
+                if yours == Scissor:
+                    result = Lose
+                else:
+                    result = Win
+            else:
+                print('???')
+
+print(result)
+
+
+mine = '가위'
+yours = '바위'
+if mine == yours:
+    print("비겼습니다.")
+else:
+    result = '이기거나 지거나.'
+    print("비기지 않았습니다.")
+
+gender = '남자'
+if gender =='남자':
+    print("남자입니다.")
+
+elif gender =='여자':
+    print("여자입니다.")
+
+else:
+    print("논바이너리입니다.")
+'''
